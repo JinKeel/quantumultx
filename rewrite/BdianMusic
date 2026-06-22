@@ -1,0 +1,14 @@
+// 波点音乐
+
+// 主机名
+hostname = us.l.qq.com, ab-bodian.kuwo.cn, bd-api.kuwo.cn
+
+// 重写
+^https:\/\/[^\/]+\.kuwo\.cn\/(api\/(popup\/scene\/fallback|popup\/scene\/info|playlist\/history\/add|listen\/music\/change|listen\/process|service\/version\/popup|service\/music_topics\/user_topics_list|advert\/shield\/emua\/report|play\/advert\/info|service\/global\/config\/vipEnter|service\/banner\/positions|service\/advert\/config|pay\/vip\/invitation\/assist\/popup|pay\/vip\/invitation\/swell|pay\/vip\/lowPriceText|pay\/sp\/actVip|popup\/start\/info|rec\/feed|advert\/free\/config|service\/conf\/all|pay\/audition\/url|service\/collect|advert\/earning\/app\/config|play\/pt\/config|message\/mes\/first|pay\/H5\/my\/popup|popup\/mine\/info)|abtest\/ui\/info) url jsonjq-response-body {"data":{},"code":439}
+
+// 脚本
+^https:\/\/us\.l\.qq\.com\/exapp url script-response-body https://github.com/JinKeel/quantumultx/raw/refs/heads/main/script/bdian.js
+^https:\/\/bd-api\.kuwo\.cn\/api\/(service\/(home\/index|global\/config\/scene)|voice\/room\/v2\/sidebar|search\/topic\/word\/list) url script-response-body https://github.com/JinKeel/quantumultx/raw/refs/heads/main/script/bdian.js
+^https:\/\/bd-api\.kuwo\.cn\/api\/service\/music\/info url script-response-body https://github.com/JinKeel/quantumultx/raw/refs/heads/main/script/bdian.js
+^https:\/\/bd-api\.kuwo\.cn\/api\/play\/music\/v2\/(checkRight|audioUrl) url script-response-body https://github.com/JinKeel/quantumultx/raw/refs/heads/main/script/bdian.js
+^https:\/\/bd-api\.kuwo\.cn\/api\/ucenter\/users\/(pub|login) url script-response-body https://github.com/JinKeel/quantumultx/raw/refs/heads/main/script/bdian.js

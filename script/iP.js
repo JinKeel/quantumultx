@@ -1,6 +1,6 @@
 var obj = JSON.parse($response.body);
 
-var ip = obj.ip || "-";
+var ip = obj.query || "-";
 var country = obj.country || "-";
 var subtitle = country + " IP:" + ip;
 

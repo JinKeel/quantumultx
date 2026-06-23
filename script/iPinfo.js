@@ -2,28 +2,29 @@ const nodeName = $environment.params;
 
 $task.fetch({
     url: "http://ipwho.is/?lang=zh-CN",
-    opts: { policy: nodeName
-    }
+    opts: { policy: nodeName }
 }).then(resp => {
     const ipwho = JSON.parse(resp.body);
-  
+
     const html = `
-<div style="text-align:left;font-family:-apple-system;line-height:1.5;">
+<div style="text-align:center;font-family:-apple-system;line-height:1.5;">
 
 <span style="font-size:19px;font-weight:650;color:#439DF8;">
 ${ipwho.type} ${ipwho.ip}
 </span><br><br>
 
-<span style="font-size:15px;">
-落地 ➤ ${ipwho.country_code} ${ipwho.country}
+<span style="font-size:14px;font-weight:500;">
+落地 ${ipwho.country} ${ipwho.country_code}
 </span><br>
 
-<span style="font-size:15px;">
-运营 ➤ ${ipwho.connection.isp}
-</span>`;
+<span style="font-size:14px;font-weight:500;">
+运营 ${ipwho.connection.isp}
+</span>
+
+</div>`;
 
     $done({
-        title: "iP查询",
+        title: "查询结果",
         htmlMessage: html
     });
 

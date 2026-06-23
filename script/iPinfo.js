@@ -7,25 +7,25 @@ $task.fetch({
     const ipwho = JSON.parse(resp.body);
 
     const html = `
-<div style="text-align:center;font-family:-apple-system;line-height:1.4;">
+<div style="text-align:center;font-family:-apple-system;line-height:1.2;"><br>
 
 <span style="font-size:18px;font-weight:650;color:#7987F2;">
-${ipwho.type} ${ipwho.ip}
+IP ${ipwho.ip}
 </span><br>
 
-<span style="color:#DDD;">───────────────────</span><br>
+<span style="color:#AAA;">─</span><br>
 
 <span style="font-size:14px;font-weight:500;">
 落地 ${ipwho.country} ${ipwho.country_code}
 </span><br>
 
-<span style="color:#DDD;">───────────────────</span><br>
+<span style="color:#AAA;">─</span><br>
 
 <span style="font-size:14px;font-weight:500;">
 运营 ${ipwho.connection.isp}
 </span><br>
 
-<span style="color:#DDD;">───────────────────</span><br>
+<span style="color:#AAA;">─</span><br>
 
 <span style="font-size:14px;font-weight:500;">
 策略 ${nodeName}

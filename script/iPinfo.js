@@ -9,7 +9,7 @@ $task.fetch({
     const html = `
 <div style="text-align:center;font-family:-apple-system;line-height:1.4;">
 
-<span style="font-size:18px;font-weight:650;color:#439DF8;">
+<span style="font-size:18px;font-weight:650;color:#7987F2;">
 ${ipwho.type} ${ipwho.ip}
 </span><br>
 

@@ -13,19 +13,19 @@ $task.fetch({
 <span style="font-size:18.5px;font-weight:650;color:#6E71F2;">IP ${data.query}</span><br>
 <span style="color:#AAA;">─</span><br>
 
-<span style="font-size:15px;font-weight:450;">位置${data.country}</span><br>
+<span style="font-size:15px;font-weight:500;">位置${data.country}</span><br>
 <span style="color:#AAA;">─</span><br>
 
-<span style="font-size:15px;font-weight:450;">${data.regionName}</span><br>
+<span style="font-size:15px;font-weight:500;">${data.regionName}</span><br>
 <span style="color:#AAA;">─</span><br>
 
-<span style="font-size:15px;font-weight:450;">${data.as.split(' ')[0]}</span><br>
+<span style="font-size:15px;font-weight:500;">${data.as.split(' ')[0]}</span><br>
 <span style="color:#AAA;">─</span><br>
 
-<span style="font-size:15px;font-weight:450;">${data.isp}</span><br>
+<span style="font-size:15px;font-weight:500;">${data.isp}</span><br>
 <span style="color:#AAA;">─</span><br>
 
-<span style="font-size:15px;font-weight:450;">策略${nodeName}</span>
+<span style="font-size:15px;font-weight:500;">策略${nodeName}</span>
 </div>`;
 
     $done({

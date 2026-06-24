@@ -8,19 +8,22 @@ $task.fetch({
     var data = JSON.parse(resp.body);
 
     var html = `
-<div style="text-align:center;font-family:-apple-system;line-height:1.1;"><br>
+<div style="text-align:center;font-family:-apple-system;line-height:1;"><br>
 
 <span style="font-size:18.5px;font-weight:650;color:#6E71F2;">IP ${data.query}</span><br>
 <span style="color:#AAA;">─</span><br>
 
-<span style="font-size:15px;font-weight:400;">位置${data.country}</span><br>
+<span style="font-size:15px;font-weight:450;">位置${data.country}</span><br>
 <span style="color:#AAA;">─</span><br>
 
-<span style="font-size:15px;font-weight:400;">${data.regionName}</span><br>
+<span style="font-size:15px;font-weight:450;">${data.regionName}</span><br>
 <span style="color:#AAA;">─</span><br>
 
-<span style="font-size:15px;font-weight:400;">${data.isp}</span><br>
-<span style="color:#AAA;">─</span><br><br>
+<span style="font-size:15px;font-weight:450;">${data.as.split(' ')[0]}</span><br>
+<span style="color:#AAA;">─</span><br>
+
+<span style="font-size:15px;font-weight:450;">${data.isp}</span><br>
+<span style="color:#AAA;">─</span><br>
 
 <span style="font-size:15px;font-weight:450;">策略${nodeName}</span>
 </div>`;

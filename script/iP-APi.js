@@ -16,7 +16,7 @@ IP ${data.query}
 <span style="color:#AAA;">─</span><br>
 
 <span style="font-size:14px;font-weight:500;">
-位置${data.country} ${data.countryCode} ${data.regionName}
+位置${data.country} ${data.regionName}
 </span><br>
 
 <span style="color:#AAA;">─</span><br>

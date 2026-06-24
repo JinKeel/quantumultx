@@ -8,21 +8,21 @@ $task.fetch({
     var data = JSON.parse(resp.body);
 
     var html = `
-<div style="text-align:center;font-family:-apple-system;line-height:1.2;"><br>
+<div style="text-align:center;font-family:-apple-system;line-height:1.1;"><br>
 
-<span style="font-size:18.5px;font-weight:650;color:#7987F2;">IP ${data.query}</span><br>
+<span style="font-size:18.5px;font-weight:650;color:#6E71F2;">IP ${data.query}</span><br>
 <span style="color:#AAA;">─</span><br>
 
-<span style="font-size:14px;font-weight:500;">位置${data.country}</span><br>
+<span style="font-size:15px;font-weight:400;">位置${data.country}</span><br>
 <span style="color:#AAA;">─</span><br>
 
-<span style="font-size:14px;font-weight:500;">${data.regionName}</span><br>
+<span style="font-size:15px;font-weight:400;">${data.regionName}</span><br>
 <span style="color:#AAA;">─</span><br>
 
-<span style="font-size:14px;font-weight:500;">${data.isp}</span><br>
-<span style="color:#AAA;">─</span><br>
+<span style="font-size:15px;font-weight:400;">${data.isp}</span><br>
+<span style="color:#AAA;">─</span><br><br>
 
-<span style="font-size:14px;font-weight:600;color:#E54742;">策略${nodeName}</span>
+<span style="font-size:15px;font-weight:450;">策略${nodeName}</span>
 </div>`;
 
     $done({

@@ -23,7 +23,7 @@ $task.fetch({
 <span style="color:#999;">─</span><br>
 
 <span style="font-size:15px;font-weight:500;">节点${nodeName}</span>
-</div>`;
+<div>`;
 
     $done({
         title: "查询结果",

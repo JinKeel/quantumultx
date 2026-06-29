@@ -1,7 +1,3 @@
-/*
-Quantumult X 资源解析器优化 可视化版
-*/
-
 var $parser = $parser || {};
 
 $parser.hashSchema = function () {

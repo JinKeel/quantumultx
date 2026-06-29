@@ -2,7 +2,9 @@ var obj = JSON.parse($response.body);
 
 var ip = obj.query || "-";
 var country = obj.country || "-";
-var subtitle = country + " IP:" + ip;
+var regionName = obj.regionName || "-";
+
+var subtitle = country + " " + regionName + " IP:" + ip;
 
 $done({
     title: "",

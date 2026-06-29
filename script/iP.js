@@ -1,3 +1,7 @@
+/*
+geo_location_checker = http://ip-api.com/json/?lang=zh-CN,https://github.com/JinKeel/quantumultx/raw/refs/heads/main/script/iP.js
+*/
+
 var obj = JSON.parse($response.body);
 
 var ip = obj.query || "-";

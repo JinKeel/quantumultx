@@ -9,7 +9,7 @@ var country = obj.country || "-";
 var regionName = obj.regionName || "-";
 
 var text = country+" "+regionName+" IP:"+ip;
-var desc = "\n位置"+country+" "+regionName+"  IP:"+ip;
+var desc = country+" "+regionName+" IP地址:"+ip;
 
 $done({
     ip: text,

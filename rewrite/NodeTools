@@ -1,8 +1,7 @@
 {
     "name":"节点工具",
-    "description":"目前更新 IP查询,节点测速",
+    "description":"目前更新：IP查询",
     "task":[
-        "event-interaction https://github.com/JinKeel/quantumultx/raw/refs/heads/main/script/iP-APi.js, tag=IP信息, img-url=map.circle.fill.system, enabled=true",
-        "event-interaction https://github.com/JinKeel/quantumultx/raw/refs/heads/main/script/Speed.js, tag=节点测速, img-url=arrow.up.arrow.down.circle.fill.system, enabled=true"
+        "event-interaction https://github.com/JinKeel/quantumultx/raw/refs/heads/main/script/iP-APi.js, tag=IP信息, img-url=map.circle.fill.system, enabled=true"
     ]
 }

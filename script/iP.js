@@ -8,11 +8,11 @@ var ip = obj.query || "-";
 var country = obj.country || "-";
 var regionName = obj.regionName || "-";
 
-var subtitle = country + " " + regionName + " IP:" + ip;
+var text = country+" "+regionName+" IP:"+ip;
+var desc = "\n位置"+country+" "+regionName+"  IP:"+ip;
 
 $done({
-    title: "",
-    subtitle: subtitle,
-    ip: subtitle,
-    description: subtitle
+    ip: text,
+    subtitle: text,
+    description: desc
 });

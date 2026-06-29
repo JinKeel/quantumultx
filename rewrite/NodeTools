@@ -2,6 +2,6 @@
     "name":"节点工具",
     "description":"目前更新：IP信息查询",
     "task":[
-        "event-interaction https://github.com/JinKeel/quantumultx/raw/refs/heads/main/script/iP-APi.js, tag=IP信息, img-url=map.circle.fill.system, enabled=true"
+        "event-interaction https://github.com/JinKeel/quantumultx/raw/refs/heads/main/script/iP-APi.js, tag=IP信息, img-url=safari.system, enabled=true"
     ]
 }

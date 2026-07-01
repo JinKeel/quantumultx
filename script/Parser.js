@@ -1,3 +1,7 @@
+/*
+2026.7.1
+*/
+
 var $parser = $parser || {};
 
 $parser.hashSchema = function () {

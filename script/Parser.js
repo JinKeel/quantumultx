@@ -1,4 +1,4 @@
-/*
+/**
 2026.7.1
 */
 
@@ -3209,7 +3209,7 @@ function get_emoji(emojip, sname) {
   }
     str1 = JSON.stringify(Lmoji)
     aa = JSON.parse(str1)
-    bb = JSON.parse(str1.replace(/🇹🇼/g, "🇨🇳"))
+    bb = JSON.parse(str1.replace(/🇹🇼/g, " 🇨🇳"))
     var cnt = emojip ==1? aa:bb;
     var flag = 0;
     for (var key in cnt) {
@@ -3217,12 +3217,12 @@ function get_emoji(emojip, sname) {
         for (i in dd) {
             if (sname.indexOf(dd[i]) != -1) {
                 flag = 1;
-                nname = key + "" + sname.replace(/[\uD83C][\uDDE6-\uDDFF][\uD83C][\uDDE6-\uDDFF]/g, "").trim(); // use regex to remove the original flag
+                nname = key + " " + sname.replace(/[\uD83C][\uDDE6-\uDDFF][\uD83C][\uDDE6-\uDDFF]/g, "").trim(); // use regex to remove the original flag
                 return [nname,key]
             }
         }
     }
-    if (flag == 0) { return ["🏴‍☠️" + sname.replace(/[\uD83C][\uDDE6-\uDDFF][\uD83C][\uDDE6-\uDDFF]/g, "").trim(), "🏴‍☠️"] }
+    if (flag == 0) { return ["🏴‍☠️ " + sname.replace(/[\uD83C][\uDDE6-\uDDFF][\uD83C][\uDDE6-\uDDFF]/g, "").trim(), "🏴‍☠️"] }
 }
 
 //emoji 处理
@@ -3243,7 +3243,7 @@ function emoji_handle(servers, Pemoji) {
             } else if (Pemoji == -1) {
                 nname = emoji_del(oname);
             }
-            var nserver = hd + "tag=" + nname.replace(" ", " ").trim()
+            var nserver = hd + "tag=" + nname.replace("  ", " ").trim()
             nlist.push(nserver)
         }
     }
@@ -4734,32 +4734,3 @@ function Tools() {
             return src.map(item => item.trim().replace(/[^\S\r\n]{2,}/g, ' '));
         }
     }
-
-    const getNodeInfo = servers => {
-        const nodes = {
-            names: servers.map(s => s.split("tag=")[1]),
-            types: servers.map(s => {
-                const type = s.match(/^(vmess|trojan|shadowsocks|http)=/);
-                return type ? type[1] : 'unknown';
-            })
-        };
-        return nodes;
-    }
-
-
-    return {
-        filter, rename, getNodeInfo
-    }
-}
-
-function AND(...args) {
-    return args.reduce((a, b) => a.map((c, i) => b[i] && c));
-}
-
-function OR(...args) {
-    return args.reduce((a, b) => a.map((c, i) => b[i] || c))
-}
-
-function NOT(array) {
-    return array.map(c => !c);
-}
